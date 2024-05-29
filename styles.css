@@ -1,0 +1,238 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap');
+/* --------------RESEt-------------- */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid lime !important; */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+/* || VARIABLES */
+
+:root {
+  /* COLOUR PALETTE:  */
+  --COLOR-ONE: #f07575;
+  --COLOR-TWO: #ecc2c2;
+  --COLOR-THREE: #f5d5d5;
+  --COLOR-FOUR: #eca3a3;
+  --COLOR-FIVE: #f7b3b3;
+  --COLOR-SIX: #833434;
+  --COLOR-SEVEN: #333;
+
+  --COLOR-TEXT: #4e2020;
+  --COLOR-TEXT2: #fff;
+}
+
+.dark-mode {
+  --COLOR-ONE: #5a99e2;
+  --COLOR-TWO: #97cceb;
+  --COLOR-THREE: #a3e8f1;
+  --COLOR-FOUR: #a3cbec;
+  --COLOR-FIVE: #c5ebe2;
+  --COLOR-SIX: #7e7cec;
+  --COLOR-SEVEN: #333333;
+}
+
+.green-mode {
+  --COLOR-ONE: #80e25a;
+  --COLOR-TWO: #44865d;
+  --COLOR-THREE: #79b47e;
+  --COLOR-FOUR: #17e44b;
+  --COLOR-FIVE: #58975b;
+  --COLOR-SIX: #6ac57e;
+  --COLOR-SEVEN: #17a71e;
+}
+
+/* --- FONT PALETTE |||  */
+
+:root {
+  --FONT-ONE: Arial, sans-serif;
+  --FONT-TWO: 'Times New Roman', serif;
+  --FONT-THREE: 'Mynerve', cursive;
+  --FONT-FOUR: 'Merriweather', serif;
+  --FONT-FIVE: 'Yuji Boku', serif;
+}
+
+
+/* || UTILITY CLASSES */
+
+body {
+  font-family: var(--FONT-FOUR);
+  
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background: #555;
+}
+
+.icon-burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 2rem;
+}
+
+.icon-burger .line {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+#nav-toggle:checked + .icon-burger .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#nav-toggle:checked + .icon-burger .line:nth-child(2) {
+    opacity: 0;
+}
+
+#nav-toggle:checked + .icon-burger .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+#nav-toggle:checked ~ .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #333;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .icon-burger {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+section {
+    padding: 5rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 5rem 0;
+    margin-top: 60px;
+}
+
+#contents ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contents li {
+    margin: 0.5rem 0;
+}
+
+.photos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.photos img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}

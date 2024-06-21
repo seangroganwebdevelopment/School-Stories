@@ -211,6 +211,14 @@ section {
     position: relative;
 }
 
+
+
+@media (min-width: 990px) {
+    #story-content {
+        padding: 0 300px 60px; 
+    }  
+}
+
 #hero .overlay {
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     display: inline-block;
@@ -231,6 +239,12 @@ section {
 
 #contents li {
     margin: 0.5rem 0;
+}
+
+@media (max-width: 990px) {
+    #story-content {
+        padding: 10px; 
+    }  
 }
 
 .photos {

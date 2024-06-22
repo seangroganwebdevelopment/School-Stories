@@ -203,7 +203,7 @@ section {
 }
 
 #hero {
-    background: url('images/dav-doh-QAG5-fqr5NQ-unsplash.jpg') no-repeat center center/cover;
+    background: url('images/isaac-demeester-fA2u50UIbOk-unsplash.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 5rem 0;
@@ -213,11 +213,13 @@ section {
 
 
 
-@media (min-width: 990px) {
+@media (min-width: 800px) {
     #story-content {
-        padding: 0 300px 60px; 
+        padding: 0 200px 60px; 
     }  
 }
+
+
 
 #hero .overlay {
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
@@ -241,11 +243,7 @@ section {
     margin: 0.5rem 0;
 }
 
-@media (max-width: 990px) {
-    #story-content {
-        padding: 10px; 
-    }  
-}
+
 
 .photos {
     display: flex;
